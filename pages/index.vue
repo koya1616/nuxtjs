@@ -1,48 +1,93 @@
 <template>
   <div>
-    <header>
-      <a href="/">Improve stretch</a>
-      <div class="menu-wrapper">
-        <a href="/">青山煌矢</a>
-        <a href="/">金澤航大</a>
-        <!-- <a href="/">予約状況</a> -->
+    <v-app>
+      <v-app-bar>
+        <v-app-bar-title>Improve stretch</v-app-bar-title>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer">
+          <VIcon :icon="mdiPost" />
+        </v-app-bar-nav-icon>
+      </v-app-bar>
+      <v-navigation-drawer
+        v-model="drawer"
+        location="bottom"
+        temporary
+      >
+        <v-list
+          :items="items"
+        ></v-list>
+      </v-navigation-drawer>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
       </div>
-    </header>
-    <div class="img-wrapper">
-      <img src="~/assets/room1.jpg" />
-    </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+      <div class="img-wrapper">
+        <img src="~/assets/room1.jpg" />
+      </div>
+    </v-app>
   </div>
 </template>
 
-<style lang="scss">
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 0 20px;
-  height: 60px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 40px;
+<script>
+import { mdiPost } from '@mdi/js'
 
-  .menu-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-  }
+export default {
+  data: () => ({
+    drawer: false,
+    group: null,
+    items: [
+      {
+        title: 'Foo',
+        value: 'foo',
+      },
+      {
+        title: 'Bar',
+        value: 'bar',
+      },
+      {
+        title: 'Fizz',
+        value: 'fizz',
+      },
+      {
+        title: 'Buzz',
+        value: 'yahoo.co.jp',
+      },
+    ],
+  }),
 
-  a {
-    color: #000;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-  }
+  watch: {
+    group () {
+      this.drawer = false
+    },
+  },
 }
+</script>
+
+<style lang="scss">
 .img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 
   img {
     width: 80%;
