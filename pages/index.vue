@@ -84,7 +84,7 @@
       <div class="LINE">
         <h1>LINE登録</h1>
         <div class="detail">
-          <img src="~/assets/qrcode.jpg" />
+          <img src="~/assets/qrcode.jpg" @click="handleClick" />
         </div>
       </div>
     </div>
@@ -120,6 +120,12 @@ export default {
       },
     ],
   }),
+
+  methods: {
+    handleClick() {
+      window.location.href = 'https://page.line.me/639ockqx';
+    },
+  },
 
   watch: {
     group () {
