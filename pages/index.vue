@@ -2,11 +2,11 @@
   <v-app>
     <v-app-bar>
       <v-app-bar-title>Improve stretch</v-app-bar-title>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer">
+      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer">
         <VIcon :icon="mdiPost" />
-      </v-app-bar-nav-icon>
+      </v-app-bar-nav-icon> -->
     </v-app-bar>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="drawer"
       location="bottom"
       temporary
@@ -14,8 +14,11 @@
       <v-list
         :items="items"
       ></v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <div class="content">
+      <div class="img-log-wrapper">
+        <img src="~/assets/logo.jpg" />
+      </div>
       <div class="img-wrapper">
         <img src="~/assets/room1.jpg" />
       </div>
@@ -75,8 +78,14 @@
           <p>phi pilates</p>
         </div>
       </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper room3">
         <img src="~/assets/room3.jpg" />
+      </div>
+      <div class="LINE">
+        <h1>LINE登録</h1>
+        <div class="detail">
+          <img src="~/assets/qrcode.jpg" />
+        </div>
       </div>
     </div>
   </v-app>
@@ -169,6 +178,30 @@ export default {
         margin-bottom: 20px;
       }
     }
+  }
+
+  .LINE {
+    width: 90%;
+    text-align: center;
+    margin: 80px 0 ;
+    div {
+      margin: 0 auto;
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+.img-log-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    aspect-ratio: 16/9;
   }
 }
 .img-wrapper {
