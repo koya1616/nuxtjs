@@ -2,22 +2,14 @@
   <v-app>
     <v-app-bar>
       <v-app-bar-title>Improve stretch</v-app-bar-title>
-      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer">
-        <VIcon :icon="mdiPost" />
-      </v-app-bar-nav-icon> -->
     </v-app-bar>
-    <!-- <v-navigation-drawer
-      v-model="drawer"
-      location="bottom"
-      temporary
-    >
-      <v-list
-        :items="items"
-      ></v-list>
-    </v-navigation-drawer> -->
     <div class="content">
-      <div class="img-log-wrapper">
-        <img src="~/assets/logo.jpg" />
+      <div class="scrolling-container">
+        <!-- <img src="~/assets/logo.jpg" /> -->
+        <img src="~/assets/top-image-1.jpg" />
+        <img src="~/assets/top-image-2.jpg" />
+        <img src="~/assets/top-image-3.jpg" />
+        <img src="~/assets/top-image-4.jpg" />
       </div>
       <div class="img-wrapper">
         <img src="~/assets/room1.jpg" />
@@ -103,24 +95,6 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
-    items: [
-      {
-        title: 'Foo',
-        value: 'foo',
-      },
-      {
-        title: 'Bar',
-        value: 'bar',
-      },
-      {
-        title: 'Fizz',
-        value: 'fizz',
-      },
-      {
-        title: 'Buzz',
-        value: 'yahoo.co.jp',
-      },
-    ],
   }),
 
   methods: {
@@ -147,6 +121,20 @@ export default {
   h1 {
     margin: 0 0 30px;
   }
+
+  .scrolling-container {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 64px;
+
+    img {
+      width: 98%;
+      aspect-ratio: 16/9;
+    }
+  }
+
   .access {
     text-align: center;
     margin-top: 80px;
