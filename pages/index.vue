@@ -29,7 +29,7 @@
     <div class="profile">
       <div class="kodai-img">
         <h1>KODAI</h1>
-        <img src="~/assets/qrcode.jpg"/>
+        <img src="~/assets/koudai.jpg"/>
       </div>
       <div class="career">
         <h2>経歴</h2>
@@ -54,6 +54,65 @@
           <li>日本ストレッチングパートーナー（JSA-CSTP）</li>
           <li>Phi pilates</li>
         </ul>
+      </div>
+    </div>
+    <div class="price">
+      <h1>料金表</h1>
+      <div class="message">
+        ストレッチで身体の本来の動きを引き出し、<br>
+        お客様一人一人に合わせたプランでサポート致します。<br>
+        Ex. 肩こり・腰痛・姿勢改善・ゴルフパフォーマンスアップなど<br>
+      </div>
+    </div>
+    <div class="price-cards">
+      <div class="time-card">
+        <div class="forty-minutes">
+          <br>
+          <h3>40分</h3>
+          <br><br>
+          <h3>¥ 5,000</h3>
+          <br>
+          <p>上半身もしくは</p>
+          <p>下半身のみの施術</p>
+          <br>
+        </div>
+        <div class="six-minutes">
+          <br>
+          <h3>60分</h3>
+          <br><br>
+          <h3>¥ 7,000</h3>
+          <br>
+          <p>全身スッキリプラン</p>
+          <br>
+        </div>
+        <div class="eighty-minutes">
+          <br>
+          <h3>80分</h3>
+          <p class="recommendation">おすすめ</p>
+          <br>
+          <h3>¥ 9,000</h3>
+          <br>
+          <p>全身</p>
+          <p>＋</p>
+          <p>体の気になる箇所</p>
+          <br>
+        </div>
+        <div class="hundred-minutes">
+          <br>
+          <h3>100分</h3>
+          <br><br>
+          <h3>¥ 11,000</h3>
+          <br>
+          <p>全身</p>
+          <p>＋</p>
+          <p>コアを鍛え</p>
+          <p>悩みを繰り返さない体づくり</p>
+          <br>
+        </div>
+      </div>
+      <div class="option-card">
+        <h3>オプション</h3>
+        トレーニング　　10分　　　¥ 1,000
       </div>
     </div>
     <div class="access">
@@ -185,6 +244,7 @@ header {
       }
       img {
         width: 80%;
+        border-radius: 50%;
       }
     }
 
@@ -209,6 +269,50 @@ header {
       text-align: left;
       font-size: 12px;
       margin: 10px auto 0;
+    }
+  }
+
+  .price {
+    text-align: center;
+    margin-top: 30px;
+    .message {
+      font-size: 12px;
+    }
+  }
+
+  .price-cards {
+    width: 95%;
+    margin-top: 20px;
+
+    .time-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+
+      div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+
+        p {
+          font-size: 12px;
+        }
+
+        .recommendation {
+          color: red;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .option-card {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      width: 100%;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 10px 0;
     }
   }
 
