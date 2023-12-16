@@ -115,42 +115,27 @@
         トレーニング　　10分　　　¥ 1,000
       </div>
     </div>
-    <div class="access">
-      <h1>アクセス</h1>
-      <div class="address">
-        <div class="detail">
-          <p>〒572-0084<br>
-              大阪府寝屋川市香里南之町32-5 YNレジデンス香里607
-          </p>
-          <p>TEL： 080-9399-5228</p>
-          <p>営業時間： 10:00〜21:00<br>
-              不定休（時間外相談可）
-          </p>
-          <p>
-            香里園駅西口→線路沿いに歩くと左手に踏切、右手に〈金券ショップ〉がある場所を右折。<br>
-            踏切を背に〈香里ダイエー本通り商店街〉を直進。<br>
-            左手１Fの薬局〈サンドラッグ〉があるマンションに当店舗があります。<br>
-            入口はサンドラッグを通過し、左手に居酒屋〈ハコ〉と黄色の看板〈買取センタ－キングラム〉の間の路地を入り、左側〈YNレジデンス〉マンション6階です。<br>
-            インターホンで【607】を押して下さい。<br>
-          </p>
-        </div>
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.907825669238!2d135.62620417571145!3d34.78309567878738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60011dda0641e4cb%3A0x34cbbc5133539095!2zWU7jg6zjgrjjg4fjg7Pjgrnpppnph4w!5e0!3m2!1sja!2sjp!4v1685157906788!5m2!1sja!2sjp"
-            width="95%"
-            height="500"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-    <div class="LINE">
-      <h1>LINE登録</h1>
-      <div class="detail">
+    <div class="qr-and-access">
+      <div class="line-qr">
+        <h2>お問い合わせ先</h2>
         <img src="~/assets/qrcode.jpg" @click="handleClick" />
+      </div>
+      <div class="access">
+        <h2>アクセス</h2>
+        〒572-0084<br>
+        大阪府寝屋川市香里南之町32-5 YNレジデンス香里607<br>
+        TEL： 080-9399-5228<br>
+        営業時間： 10:00〜21:00<br>
+        不定休（時間外相談可）<br>
+        香里園駅西口→線路沿いに歩くと左手に踏切、<br>
+        右手に〈金券ショップ〉がある場所を右折。<br>
+        踏切を背に〈香里ダイエー本通り商店街〉を直進。<br>
+        左手１Fの薬局〈サンドラッグ〉があるマンションに<br>
+        当店舗があります。<br>
+        入口はサンドラッグを通過し、左手に居酒屋〈ハコ〉と<br>
+        黄色の看板〈買取センタ－キングラム〉の間の路地を入り、<br>
+        左側〈YNレジデンス〉マンション6階です。<br>
+        インターホンで【607】を押して下さい。<br>
       </div>
     </div>
   </div>
@@ -316,41 +301,29 @@ header {
     }
   }
 
-  .access {
-    text-align: center;
-    margin-top: 80px;
-    .detail {
-      margin: 0 auto;
-      width: 90%;
-      text-align: left;
-      p {
-        margin-bottom: 20px;
-      }
-    }
-  }
+  .qr-and-access {
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
 
-  .LINE {
-    width: 90%;
-    text-align: center;
-    margin: 80px 0 ;
-    div {
-      margin: 0 auto;
+    .line-qr {
+      flex: 1;
+      text-align: center;
+
       img {
         width: 80%;
       }
     }
-  }
-}
-.img-log-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  width: 100%;
 
-  img {
-    width: 100%;
-    aspect-ratio: 16/9;
+    .access {
+      flex: 1;
+      font-size: 7px;
+
+      h2 {
+        text-align: center;
+        font-size: 24px;
+      }
+    }
   }
 }
 </style>
